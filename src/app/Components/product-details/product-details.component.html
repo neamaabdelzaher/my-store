@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+      <div  class="card col-12 m-5 " style="width: 18rem;"  >
+        <img [src]="singleProduct?.url" class="card-img-top mt-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{singleProduct?.name}}</h5>
+          <h5 class="card-title">{{singleProduct?.price}}$</h5>
+          <h5 class="card-title">{{singleProduct?.description}}</h5>
+          <select   class="form-select w-50 mb-2" aria-label="Default select example" #itemCount>
+            
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>  
+  
+
+          <button class="btn btn-primary">Add To Cart</button>
+ <div>
+  <a style="text-decoration: none;" routerLink="/products">Back To Products List</a>
+
+  
+ </div>
+        </div>
+      </div>
+
+
+    </div>
+
+</div>

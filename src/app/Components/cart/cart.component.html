@@ -1,0 +1,35 @@
+
+
+
+
+<div class="container">
+   <div   class="row justify-content-evenly">
+        
+      <div  *ngFor=" let prd of cart ;" class="card col-sm-5 col-l-5 m-5  " style="width: 18rem;"  >
+        <img [src]="prd?.url" class="card-img-top mt-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{prd?.name}}</h5>
+          <h5 class="card-title">{{prd?.price}}$</h5>
+      <input   type="number" min="1" max="10" [value]="amount" class="form-control w-50 mb-2"  >
+
+             
+ <div>
+
+  
+ </div>
+        </div>
+      </div>
+      
+
+      <div class="mt-5  col-sm-6 col-l-6">
+        <app-checkout-form  [hidden]="cart.length==0"> </app-checkout-form>
+        <h5 *ngIf="cart.length==0">your cart is empty </h5>
+    
+       </div>
+    
+   </div>
+</div>
+
+
+
+   

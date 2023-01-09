@@ -1,0 +1,23 @@
+    
+        <form  #confirmeForm="ngForm"  [formGroup]="userFormGroup " (ngSubmit)="success()" >
+            <div >
+              <label for="usrName" class="form-label">Full Name</label>
+            </div>
+              <input type="text" class="form-control"   placeholder="(minimum 3 characters)"  name="usrName" id="usrName"  formControlName="fullName" [class.is-valid]="fullName?.valid" [class.is-invalid]="fullName?.invalid" >
+        
+              <div >
+                <label for="address" class="form-label">Address</label>
+               
+                <input type="text" class="form-control"  placeholder="(minimum 6 characters)" name="address" id="address" formControlName="address" [class.is-valid]="address?.valid" [class.is-invalid]="address?.invalid" >
+              </div>
+              <div >
+                <label for="credit" class="form-label">Credit card number</label>
+               
+                <input type="text" class="form-control"   placeholder="(16-digit number)" name="credit" id="credit" formControlName="credit" [class.is-valid]="credit?.valid" [class.is-invalid]="credit?.invalid" >
+              <p>We'll never share your payment details with anyone else.</p>
+              </div>
+  
+              <button type="submit"  [disabled]="confirmeForm.invalid" class="btn btn-success" >Submit</button>
+        </form>
+
+        

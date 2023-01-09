@@ -1,0 +1,67 @@
+
+<!-- show all the products -->
+ <div class="container">
+    <div class="row justify-content-center">
+<!-- 
+
+      <form *ngFor="let pro of IProduct ;" class="card col-12 m-5 " style="width: 18rem;" >
+        <input type="image" src="{{pro.url}}"  >
+        <input type="text" [value]="pro.name" >
+        <input type="number"  [value]="pro.price">
+         <select   class="form-select w-50 mb-2" aria-label="Default select example" #itemCount>
+            
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select> 
+
+           <button type="submit" (click)="addProduct(pro,itemCount.value)" class="btn btn-primary">Add To Cart</button> 
+  
+
+      </form>  -->
+    
+  
+  
+        
+      <div  *ngFor="let pro of IProduct ;" class="card col-12 m-5 " style="width: 18rem;"  >
+      <a routerLink="/product-details/{{pro.id}}"><img src="{{pro.url}}" class="card-img-top mt-2" alt="..."> </a> 
+       
+        <div class="card-body">
+           <a style="text-decoration: none;" routerLink="/product-details/{{pro.id}}"> <h5 class="card-title">{{pro.name}}</h5></a> 
+
+          <!-- <a [routerLink]="['/product-details',pro.id]"> <h5 class="card-title">{{pro.name}}</h5></a>  -->
+          
+          
+          <h5 class="card-title">{{pro.price}}$</h5> 
+
+
+      <select   class="form-select w-50 mb-2" aria-label="Default select example" #itemCount>
+            
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>  
+
+          <button (click)="addToCard(pro,itemCount.value)" class="btn btn-primary">Add To Cart</button> 
+        </div> 
+       </div> 
+
+
+
+    </div>
+
+  </div>
